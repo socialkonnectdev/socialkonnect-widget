@@ -20,9 +20,9 @@
   };
 
   // Vérifier si nous sommes dans l'admin Shopify
-  const isShopifyAdmin =
-    window.location.hostname.includes('myshopify.com') &&
-    (window.location.pathname.includes('/admin') || (window.Shopify && window.Shopify.Shop));
+const isShopifyAdmin =
+  (window.location.hostname.includes('myshopify.com') || window.location.hostname.includes('admin.shopify.com')) &&
+  (window.location.pathname.includes('/admin') || window.location.pathname.includes('/store/') || (window.Shopify && window.Shopify.Shop));
 
   logDebug('Initialisation du widget', {
     hostname: window.location.hostname,
